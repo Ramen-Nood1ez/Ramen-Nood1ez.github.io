@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8">
+		<title>Snake</title>
+		<meta name="description" content="Play the classic mobile Snake game for free online. Eat the food but don’t hit the walls or your own tail!">
+		<meta name="author" content="Neave Interactive">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+		<meta name="referrer" content="origin">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Snake">
+		<meta name="application-name" content="Snake">
+		<meta name="msapplication-tooltip" content="Snake">
+		<meta name="msapplication-starturl" content="https://playsnake.org/">
+		<meta name="msapplication-TileImage" content="https://playsnake.org/assets/images/icon-400.png">
+		<meta name="msapplication-TileColor" content="#9bba5a">
+		<meta name="msapplication-navbutton-color" content="#9bba5a">
+		<meta name="theme-color" content="#9bba5a">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://playsnake.org/">
+		<meta property="og:site_name" content="Snake">
+		<meta property="og:title" content="Snake - Play the retro Snake game online for free">
+		<meta property="og:description" content="Play the classic mobile Snake game for free online. Eat the food but don’t hit the walls or your own tail!">
+		<meta property="og:image" content="https://playsnake.org/assets/images/icon-400.png">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@neave">
+		<meta name="twitter:title" content="Snake">
+		<meta name="twitter:description" content="Play the classic mobile Snake game for free online. Eat the food but don’t hit the walls or your own tail!">
+		<meta name="twitter:image" content="https://playsnake.org/assets/images/icon-400.png">
+		<link rel="shortcut icon" href="https://playsnake.org/assets/images/icon-16.png">
+		<link rel="icon" sizes="16x16" href="icon-16.png">
+		<link rel="icon" sizes="32x32" href="icon-32.png">
+		<link rel="icon" sizes="100x100" href="icon-100.png">
+		<link rel="icon" sizes="200x200" href="images/icon-200.png">
+		<link rel="icon" sizes="400x400" href="icon-400.png">
+		<link rel="image_src" href="icon-400.png">
+		<link rel="apple-touch-icon-precomposed" href="icon-400.png">
+		<link rel="stylesheet" href="app.15.css">
+		<style>@keyframes neave-anim{to{background-position:0 400%}}@keyframes fade-anim{0%{opacity:0}40%{opacity:0}50%{opacity:1}60%{opacity:0}100%{opacity:0}}@keyframes fade-mid-anim{0%{opacity:.5}40%{opacity:.5}50%{opacity:1}60%{opacity:.5}100%{opacity:.5}}.neave{position:absolute;display:block;left:15px;left:calc(15px + env(safe-area-inset-left));top:15px;top:calc(15px + env(safe-area-inset-top));width:44px;height:44px;margin:0;padding:0;z-index:100}.neave .title{display:none}.neave svg{position:absolute;left:0;top:0;z-index:100;border-radius:50%;border:2px solid #fff;margin:0;padding:0;box-sizing:content-box;pointer-events:none}.mobile .neave svg{animation:fade-mid-anim 5s infinite ease-in-out}.neave .disc{position:absolute;display:block;width:44px;height:44px;background-color:#9fc;background-image:linear-gradient(to bottom,#9fc 0%,#9cf 25%,#f9c 50%,#fc9 75%,#9fc 100%);background-size:100% 400%;border-radius:50%;pointer-events:none;animation:neave-anim 8s infinite linear;opacity:0;will-change:opacity;transition:opacity .2s ease-out}.mobile .neave .disc{animation:neave-anim 8s infinite linear,fade-anim 5s infinite ease-in-out}body:not(.mobile) .neave:hover .disc{opacity:1}.neave:active{margin-top:1px}</style>
+	</head>
+	<body>
+		<div class="alt">
+			<h1>Snake</h1>
+			<p>Play the classic retro mobile phone game in your web browser! Guide the snake towards the food but avoid your ever-growing tail.</p>
+		</div>
+		<section class="content">
+			<div class="mute">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+					<g fill="#000">
+						<polygon points="14.025,38.004 14.025,61.993 31.548,61.993 55.537,85.982 55.537,14.018 31.552,38.004"></polygon>
+						<path d="M67.41,34.095l-4.243,4.239c6.43,6.432,6.43,16.896,0,23.324L67.41,65.9C76.179,57.129,76.179,42.864,67.41,34.095z"></path>
+						<path d="M75.89,25.616l-4.241,4.239c11.105,11.105,11.105,29.176,0,40.284l4.241,4.241C89.337,60.934,89.337,39.06,75.89,25.616z"></path>
+					</g>
+				</svg>
+			</div>
+			<div class="game intro notranslate" data-level0="Slug" data-level1="Worm" data-level2="Python">
+				<nav>
+					<h1>Snake</h1>
+					<p class="choose">Choose level:</p>
+					<p class="level" data-level="0">Slug</p>
+					<p class="level" data-level="1">Worm</p>
+					<p class="level" data-level="2">Python</p>
+				</nav>
+				<h2 class="countdown"></h2>
+				<h2 class="ended">Game over!</h2>
+				<h2 class="best">Best score!</h2>
+				<div class="board"></div>
+				<p class="info left"><span class="score">0</span></p>
+				<p class="info share" data-url="https://playsnake.org/" data-text="I scored %d in Snake!">Share!</p>
+				<p class="info right"><span class="level"></span> <span class="best">0</span></p>
+			</div>
+		</section>
+		<script src="app.16.js"></script>
+	</body>
+</html>
