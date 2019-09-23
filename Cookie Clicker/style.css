@@ -2,9 +2,8 @@
   font-size: 25px;
   --main-color: red;
   --main-bg-color: maroon;
-  font: sans-serif;
-  font-stretch: condensed;
-
+  font-family: 'Oxygen Mono', monospace;
+  font-weight: 1000;
 }
 
 body {
@@ -12,8 +11,6 @@ body {
   color: var(--main-color);
   background-color: var(--main-bg-color);
   background-image: url("AlchemylabBackground.png");
-  font: sans-serif;
-  font-stretch: condensed;
 }
 
 script {

@@ -14,17 +14,22 @@
         document.getElementById('ammountFarms').innerHTML = "You Own " + farms + " Farms";
         document.getElementById('costFarms').innerHTML = ((farms+1) * 15) + " Cookies";
 
-        document.getElementById('cookiespersecond').innerHTML = "You are gaining " + (((autoClick)+(farms*2))*multiplier) + " Cookies per/s";
+        document.getElementById('ammountGrandmas').innerHTML = "You Own " + grandmas + " Grandma's";
+        document.getElementById('costGrandmas').innerHTML = ((grandmas+1) * 50) + " Cookies";
+
+        document.getElementById('cookiespersecond').innerHTML = "You are gaining " + (((autoClick)+(farms*2)+(grandmas*3))*multiplier) + " Cookies per/s";
     }
 
     var multiplier = 1;
     var cookiecount = 0;
     var autoClick = 0;
     var farms = 0;
+    var grandmas = 0;
 
     function timer() {
         cookiecount = cookiecount + autoClick*multiplier;
         cookiecount = cookiecount + farms*2*multiplier;
+        cookiecount = cokkiecount + grandmas*3*multiplier;
         update()
     }
     setInterval(timer, 1000)
@@ -51,8 +56,8 @@
     <br>
     <br>
 
-    <button><a href="#" onClick="save()">Save</a></button>
-    <button><a href="#" onclick="load()">Load</a></button>
+    <button width="50px" height="50px"><a href="#" onClick="save()">Save</a></button>
+    <button width="50px" height="50px"><a href="#" onclick="load()">Load</a></button>
     <br><br>
 
     <p id="ammountMultiplier">Multiplier Upgrade x2</p>
@@ -78,6 +83,7 @@
         localStorage.setItem("cookiecount", cookiecount);
         localStorage.setItem("autoClick", autoClick);
         localStorage.setItem("farms", farms);
+        localStorage.setItem("grandmas", grandmas)
         localStorage.setItem("multiplier", multiplier);
     }
     function load() {
@@ -87,6 +93,8 @@
         autoClick = parseInt(autoClick);
         farms = localStorage.getItem("farms");
         farms = parseInt(farms);
+        grandmas = localstorage.getItem("grandmas")
+        grandmas = parsInt(grandmas);
         multiplier = localStorage.getItem("multiplier");
         multiplier = parseInt(multiplier);
         update()
@@ -105,6 +113,14 @@
             cookiecount = cookiecount - ((farms+1) * 15);
             farms = farms + 1;
             update()
+        }
+    }
+
+    function buyGrandmas() {
+      if (cookiecount >= ((grandmas+1)) * 50 )) {
+          cookiecount = cookiecount - ((farms+1) * 50);
+          grandmas = grandmas + 1;
+          update()
         }
     }
 
