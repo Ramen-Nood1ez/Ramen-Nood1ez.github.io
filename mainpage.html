@@ -42,7 +42,7 @@
                                    <link rel="shortcut icon" href="../assets/ico/favicon.png">
   </head>
 
-  <body>
+  <body onload="Start()" onunload="Leave()">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -148,6 +148,12 @@
     <script src="../assets/js/bootstrap-collapse.js"></script>
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
-
+    <script> Function Start() {
+      window.alert("Hello!");
+    }
+    </script>
+    <script> Function Leave() {
+      window.alert("Goodbye!")
+    } </script>
   </body>
 </html>
