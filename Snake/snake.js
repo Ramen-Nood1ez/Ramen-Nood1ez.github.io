@@ -72,6 +72,8 @@ function move_snake() {
     score += 10;
     // Display score on screen
     document.getElementById("score").innerHTML = score;
+    food_x = -10;
+    food_y = -10;
     gen_food();
   } else {
     snake.pop();
@@ -132,6 +134,8 @@ function random_food(min, max) {
 }
 
 function gen_food() {
+  food_x = -10
+  food_y = -10
   food_x = random_food(0, snakeboard.width - 10);
   food_y = random_food(0, snakeboard.height - 10);
   snake.foreach(function has_snake_eaten_food(part) {
